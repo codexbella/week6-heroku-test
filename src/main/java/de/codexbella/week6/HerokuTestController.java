@@ -12,7 +12,7 @@ public class HerokuTestController {
     public String getMatchingToDoItems(@PathVariable String searchTerm) {
         return "Ich suche dringend "+searchTerm;
     }
-    @PostMapping("/{number}")
+    @PostMapping("/calculate")
     public int calculate(@RequestBody int number) {
         return number*5;
     }
