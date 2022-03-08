@@ -8,12 +8,13 @@ import java.util.List;
 @RequestMapping()
 public class HerokuTestController {
 
+
     @GetMapping("/{searchTerm}")
     public String getMatchingToDoItems(@PathVariable String searchTerm) {
         return "Ich suche dringend "+searchTerm;
     }
-    @PostMapping("/calculate")
-    public int calculate(@RequestBody int number) {
-        return number*5;
+    @PostMapping("/showstringlength")
+    public String showStringLength(@RequestBody String input) {
+        return "There are "+input.length()+" characters in the string you send.";
     }
 }
