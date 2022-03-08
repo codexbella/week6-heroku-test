@@ -1,9 +1,6 @@
 package de.codexbella.week6;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -14,5 +11,9 @@ public class HerokuTestController {
     @GetMapping("/{searchTerm}")
     public String getMatchingToDoItems(@PathVariable String searchTerm) {
         return "Ich suche dringend "+searchTerm;
+    }
+    @PostMapping("/{number}")
+    public int calculate(@RequestBody int number) {
+        return number*5;
     }
 }
