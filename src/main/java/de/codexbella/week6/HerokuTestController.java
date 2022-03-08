@@ -10,7 +10,7 @@ public class HerokuTestController {
 
 
     @GetMapping("/{searchTerm}")
-    public String getMatchingToDoItems(@PathVariable String searchTerm) {
+    public String searching(@PathVariable String searchTerm) {
         return "Ich suche dringend "+searchTerm;
     }
     @PostMapping("/showstringlength")
